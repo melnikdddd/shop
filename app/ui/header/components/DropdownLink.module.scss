@@ -1,0 +1,36 @@
+.dropdownElement {
+  @apply absolute hidden left-0;
+  animation: dropdownAnim 0.3s ease-in-out;
+
+  &:hover{
+    display: flex;
+  }
+
+}
+
+@keyframes dropdownAnim {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.linkText{
+  @apply text-lg;
+}
+.link {
+  @apply transition-all;
+   &:hover{
+     @apply text-slate-50;
+        .linkText{
+          @apply underline decoration-2 decoration-red-700;
+        }
+      .dropdownElement{
+       @apply flex w-full justify-around flex-wrap;
+     }
+   }
+}
